@@ -26,6 +26,7 @@ namespace WFAcbrRate
       {
          try
          {
+            dataGridView1.Rows.Clear(); // очистка строки если вдруг загружен нулевой курс
             //Console.WriteLine("Введите требуемую дату для отображения соотношения стоимости RUB к иностранным валютам ЦБ РФ [ДД.ММ.ГГГГ]");
             //DateTime date = DateTime.ParseExact(Console.ReadLine(), "dd.MM.yyyy", CultureInfo.InvariantCulture);
 
