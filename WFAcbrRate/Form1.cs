@@ -49,7 +49,7 @@ namespace WFAcbrRate
             //Console.WriteLine(date.Month + "<<< ");
 
             //WebRequest request = WebRequest.Create("http://www.cbr.ru/scripts/XML_daily.asp?date_req=29/03/2018");
-            WebRequest request = WebRequest.Create("http://www.cbr.ru/scripts/XML_daily.asp?date_req=" + date.Day + "/" + (date.Month < 10 ? "0" + date.Month.ToString() : date.Month.ToString()) + "/" + date.Year + "\"");
+            WebRequest request = WebRequest.Create("http://www.cbr.ru/scripts/XML_daily.asp?date_req=" + (date.Day < 10 ? ("0" + date.Day.ToString()) : date.Day.ToString()) + "/" + (date.Month < 10 ? "0" + date.Month.ToString() : date.Month.ToString()) + "/" + date.Year + "\"");
 
             WebResponse response = request.GetResponse();
 
